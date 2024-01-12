@@ -41,9 +41,11 @@ const activity = () => {
               }}
               className="bgImage"
             >
-              <img src={activity.image} alt="image" className="activity-img" />
-              <p>{activity.name}</p>
-              <p>{activity.title}</p>
+              {/* <img src={activity.image} alt="image" className="activity-img" /> */}
+              <div className="name-title">
+                <p className="activity-name">{activity.name}</p>
+                <p className="activity-title">{activity.title}</p>
+              </div>
             </div>
           );
         })}

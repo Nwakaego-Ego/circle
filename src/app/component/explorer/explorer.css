@@ -1,0 +1,36 @@
+.fa {
+  width: 30px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.explorer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 5px;
+
+  max-width: 350px;
+}
+
+.explorer-item {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+  gap: 6px;
+  border-radius: 4px;
+  /* color: white; */
+
+  /* background: linear-gradient(to bottom right, #3490dc, #6f42c1, #e83e8c); */
+  /* background-color: #6f42c1; */
+  background-color: #bf30ee;
+  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.25),
+    10px 8px 40px rgba(0, 0, 0, 0.25), inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 10px rgba(255, 255, 255, 0.2),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.75);
+}
+
+.explorer-item:hover {
+  background: linear-gradient(to bottom right, #e83e8c, #6f42c1, #3490dc);
+}
