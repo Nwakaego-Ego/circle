@@ -12,7 +12,14 @@ import "./explorer.css";
 const Explorer = () => {
   return (
     <>
-      <div className="explorer-container">
+      <div>
+        <img
+          src="/talking_drum.png"
+          alt="talking drum"
+          className="talking-drum"
+        />
+      </div>
+      <div className="explorer-container mt-12">
         <div className="explorer-item">
           <FontAwesomeIcon icon={faHome} className="fa" />
           <div>Home</div>
@@ -35,8 +42,9 @@ const Explorer = () => {
         </div>
         <div className="explorer-item">
           <FontAwesomeIcon icon={faGear} className="fa" />
-          <div>Group</div>
+          <div>Setting</div>
         </div>
+        <button className="btnSync">Sync</button>
       </div>
     </>
   );

@@ -12,13 +12,13 @@ const activity = () => {
       bgImg: "/nwakaego.jpeg",
       image: "/ego.jpeg",
       name: "Nwakaego",
-      title: "Junior dev club",
+      title: "Twitter coming for feminist",
     },
     {
       bgImg: "/chisom.jpeg",
       image: "/chisom.jpeg",
       name: "Chisom",
-      title: "Chisom Hair",
+      title: "RHWL Gist catchup",
     },
     {
       bgImg: "/chika.jpeg",
