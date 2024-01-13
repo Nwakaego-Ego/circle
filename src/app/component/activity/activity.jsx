@@ -12,7 +12,7 @@ const activity = () => {
       bgImg: "/nwakaego.jpeg",
       image: "/ego.jpeg",
       name: "Nwakaego",
-      title: "Twitter coming for feminist",
+      title: "Twitter feminist",
     },
     {
       bgImg: "/chisom.jpeg",
@@ -39,7 +39,8 @@ const activity = () => {
               // style={{
               //   backgroundImage: `url(${activity.bgImg})`,
               // }}
-              className="bgImage"
+              // className="bgImage"
+              className="activity-wrapper"
             >
               <img src={activity.image} alt="image" className="activity-img" />
               <div className="name-title">

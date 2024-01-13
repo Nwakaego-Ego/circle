@@ -1,7 +1,7 @@
-.activity {
+/* .activity {
   position: relative;
   left: 30px;
-}
+} */
 
 .activity-img {
   width: 80px;
@@ -27,11 +27,14 @@
   transform: scale(1.07);
 }
 
+.activity-wrapper {
+}
+
 .name-title {
   /* position: absolute; */
   bottom: 20px;
 
-  font-size: 12px;
+  font-size: 15px;
   color: white;
   font-weight: 600;
 }
@@ -39,7 +42,7 @@
 .activity-name {
   /* background-color: rgba(255, 255, 255, 0.15);  */
   /* background-color: rgba(209, 154, 243, 0.4); */
-  text-align: center;
+  /* text-align: center; */
   font-weight: 500;
   border-radius: 10px;
   color: black;
@@ -50,11 +53,11 @@
 .activity-title {
   /* background-color: rgba(255, 255, 255, 0.15);  */
   /* background-color: rgba(209, 154, 243, 0.4); */
-  text-align: center;
+  /* text-align: center; */
   color: black;
   font-weight: 600;
   border-radius: 10px;
-  width: 100px;
+  width: 150px;
   border: 10px;
   position: relative;
   top: 8px;

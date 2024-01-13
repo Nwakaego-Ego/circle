@@ -1,9 +1,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faAlarmClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faHourglass } from "@fortawesome/free-solid-svg-icons";
 import { FaClock } from "react-icons/fa";
 import "./sidebar.css";
 
 const Sidebar = () => {
+  const engagements = [
+    {
+      title: "Our Gossip",
+      time: "4 : 30pm",
+    },
+    {
+      title: "Our Gossip",
+      time: "4 : 30pm",
+    },
+    {
+      title: "Our Gossip",
+      time: "4 : 30pm",
+    },
+    {
+      title: "Our Gossip",
+      time: "4 : 30pm",
+    },
+  ];
   return (
     <>
       <div className="circle-main">
@@ -16,17 +34,19 @@ const Sidebar = () => {
         </div>
 
         <div className="engagement">
-          <div className="explorer-item">
-            <FontAwesomeIcon icon={faAlarmClock} className="fa" />
-            <FaClock />
+          <div className="engagement-item ">
+            <FaClock className="fa" />
             <div className="engagement-text">Engagements</div>
           </div>
-          <div className="">
-            <div className="">Our Gossip</div>
-            <div className="">Bible Study</div>
-            <div className="">Book Club</div>
-            <div className="">Twitter trend</div>
-          </div>
+
+          {engagements.map((item) => {
+            return (
+              <div key={item.id} className="flex">
+                <div>{item.title}</div>
+                <div className=" engagement-timer">{item.time}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

@@ -1,0 +1,18 @@
+.dashboard-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the container on the page */
+}
+
+.explorer-component {
+  width: 20%;
+}
+
+.activity-component {
+  width: 50%;
+}
+
+.sidebar-component {
+  width: 30%;
+}
