@@ -31,17 +31,17 @@ const activity = () => {
   const background = "./ego.jpeg";
   return (
     <>
-      <div className="flex">
+      <div className="flex activity">
         {activityBar.map((activity) => {
           return (
             <div
               key={activity.id}
-              style={{
-                backgroundImage: `url(${activity.bgImg})`,
-              }}
+              // style={{
+              //   backgroundImage: `url(${activity.bgImg})`,
+              // }}
               className="bgImage"
             >
-              {/* <img src={activity.image} alt="image" className="activity-img" /> */}
+              <img src={activity.image} alt="image" className="activity-img" />
               <div className="name-title">
                 <p className="activity-name">{activity.name}</p>
                 <p className="activity-title">{activity.title}</p>
