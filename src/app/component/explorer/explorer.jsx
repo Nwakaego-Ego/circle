@@ -7,6 +7,7 @@ import {
   faUsers,
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
+
 import "./explorer.css";
 
 const Explorer = () => {

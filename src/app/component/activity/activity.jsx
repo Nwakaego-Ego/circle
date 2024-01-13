@@ -1,3 +1,4 @@
+import Feed from "../feed/feed";
 import "./activity.css";
 
 const activity = () => {
@@ -31,25 +32,32 @@ const activity = () => {
   const background = "./ego.jpeg";
   return (
     <>
-      <div className="flex activity">
-        {activityBar.map((activity) => {
-          return (
-            <div
-              key={activity.id}
-              // style={{
-              //   backgroundImage: `url(${activity.bgImg})`,
-              // }}
-              // className="bgImage"
-              className="activity-wrapper"
-            >
-              <img src={activity.image} alt="image" className="activity-img" />
-              <div className="name-title">
-                <p className="activity-name">{activity.name}</p>
-                <p className="activity-title">{activity.title}</p>
+      <div className="activity">
+        <div className="flex ">
+          {activityBar.map((activity) => {
+            return (
+              <div
+                key={activity.id}
+                // style={{
+                //   backgroundImage: `url(${activity.bgImg})`,
+                // }}
+                // className="bgImage"
+                className="activity-wrapper"
+              >
+                <img
+                  src={activity.image}
+                  alt="image"
+                  className="activity-img"
+                />
+                <div className="name-title">
+                  <p className="activity-name">{activity.name}</p>
+                  <p className="activity-title">{activity.title}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <Feed />
       </div>
     </>
   );

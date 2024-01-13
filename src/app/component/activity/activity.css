@@ -1,27 +1,19 @@
-/* .activity {
-  position: relative;
-  left: 30px;
-} */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.activity {
+  border-right: 1px solid rgba(240, 237, 237, 0.979);
+  border-left: 1px solid rgba(240, 237, 237, 0.979);
+}
 
 .activity-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  border: 2px solid #6f42c1;
 }
-
-/* .bgImage {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat; 
-
-   width: 120px;
-  height: 200px;
-  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
-  border-radius: 10px;
-  margin: 10px;
-  transition: transform 100ms ease-in;
-  cursor: pointer; 
-}  */
 
 .activity-img:hover {
   transform: scale(1.07);
@@ -31,7 +23,6 @@
 }
 
 .name-title {
-  /* position: absolute; */
   bottom: 20px;
 
   font-size: 15px;
@@ -40,9 +31,6 @@
 }
 
 .activity-name {
-  /* background-color: rgba(255, 255, 255, 0.15);  */
-  /* background-color: rgba(209, 154, 243, 0.4); */
-  /* text-align: center; */
   font-weight: 500;
   border-radius: 10px;
   color: black;
@@ -51,9 +39,6 @@
 }
 
 .activity-title {
-  /* background-color: rgba(255, 255, 255, 0.15);  */
-  /* background-color: rgba(209, 154, 243, 0.4); */
-  /* text-align: center; */
   color: black;
   font-weight: 600;
   border-radius: 10px;

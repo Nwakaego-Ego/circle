@@ -56,10 +56,16 @@
   /* background: linear-gradient(to bottom right, #3490dc, #6f42c1, #e83e8c); */
   /* background-color: #6f42c1; */
   /* background-color: #bf30ee; */
-  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.25),
+
+  /* box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.25),
     10px 8px 40px rgba(0, 0, 0, 0.25), inset 3px 3px 6px rgba(0, 0, 0, 0.5),
     inset 3px 3px 10px rgba(255, 255, 255, 0.2),
-    inset -3px -3px 8px rgba(0, 0, 0, 0.75);
+    inset -3px -3px 8px rgba(0, 0, 0, 0.75); */
+
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2), 5px 4px 20px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.1),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .explorer-item:hover {
