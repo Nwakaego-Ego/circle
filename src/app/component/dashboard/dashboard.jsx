@@ -8,7 +8,7 @@ const dashboard = () => {
     <>
       <div className="dashboard-main p-8">
         <Explorer className="explorer-component" />
-        <Activity className="actvity-component" />
+        <Activity className="activity-component" />
         <Sidebar className="sidebar-component" />
       </div>
     </>

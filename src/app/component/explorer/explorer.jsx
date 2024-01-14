@@ -6,6 +6,7 @@ import {
   faBell,
   faUsers,
   faGear,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./explorer.css";
@@ -41,6 +42,10 @@ const Explorer = () => {
           <div className="explorer-item">
             <FontAwesomeIcon icon={faUsers} className="fa" />
             <div>Yard</div>
+          </div>
+          <div className="explorer-item">
+            <FontAwesomeIcon icon={faEnvelope} className="fa" />
+            <div>Request</div>
           </div>
           <div className="explorer-item">
             <FontAwesomeIcon icon={faGear} className="fa" />

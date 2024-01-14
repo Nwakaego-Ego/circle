@@ -1,8 +1,8 @@
-.dashboard-main {
+/* .dashboard-main {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px; /* Adjust the max-width as needed */
-  margin: 0 auto; /* Center the container on the page */
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .explorer-component {
@@ -15,4 +15,36 @@
 
 .sidebar-component {
   width: 30%;
+}  */
+
+.dashboard-main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explorer-component {
+  width: 20%;
+  background-color: #f0f0f0; /* Optional: Add background color */
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.activity-component {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border: 2px solid red;
+}
+
+.sidebar-component {
+  width: 30%;
+  background-color: #f0f0f0;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  overflow-y: auto;
+  border: 2px solid red;
 }

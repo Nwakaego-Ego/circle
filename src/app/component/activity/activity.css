@@ -36,6 +36,9 @@
   color: black;
   width: 100px;
   border: 10px;
+  /* text-align: center; */
+  position: relative;
+  left: 10px;
 }
 
 .activity-title {
@@ -46,4 +49,5 @@
   border: 10px;
   position: relative;
   top: 8px;
+  left: 5px;
 }

@@ -19,7 +19,7 @@ const activity = () => {
       bgImg: "/chisom.jpeg",
       image: "/chisom.jpeg",
       name: "Chisom",
-      title: "RHWL Gist catchup",
+      title: "RHWL Gist ",
     },
     {
       bgImg: "/chika.jpeg",
@@ -36,20 +36,32 @@ const activity = () => {
         <div className="flex ">
           {activityBar.map((activity) => {
             return (
-              <div
-                key={activity.id}
-                // style={{
-                //   backgroundImage: `url(${activity.bgImg})`,
-                // }}
-                // className="bgImage"
-                className="activity-wrapper"
-              >
+              // <div
+              //   key={activity.id}
+              //   // style={{
+              //   //   backgroundImage: `url(${activity.bgImg})`,
+              //   // }}
+              //   // className="bgImage"
+              //   className="activity-wrapper"
+              // >
+              //   <img
+              //     src={activity.image}
+              //     alt="image"
+              //     className="activity-img"
+              //   />
+              //   <div className="name-title">
+              //     <p className="activity-name">{activity.name}</p>
+              //     <p className="activity-title">{activity.title}</p>
+              //   </div>
+              // </div>
+
+              <div key={activity.id}>
                 <img
                   src={activity.image}
                   alt="image"
                   className="activity-img"
                 />
-                <div className="name-title">
+                <div>
                   <p className="activity-name">{activity.name}</p>
                   <p className="activity-title">{activity.title}</p>
                 </div>
