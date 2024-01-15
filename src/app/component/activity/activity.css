@@ -1,6 +1,10 @@
 * {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
+}
+
+.main-activity {
+  padding-left: 20%;
 }
 
 .activity {

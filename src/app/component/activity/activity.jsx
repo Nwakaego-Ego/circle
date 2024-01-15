@@ -31,30 +31,11 @@ const activity = () => {
 
   const background = "./ego.jpeg";
   return (
-    <>
+    <div className="main-activity">
       <div className="activity">
         <div className="flex ">
           {activityBar.map((activity) => {
             return (
-              // <div
-              //   key={activity.id}
-              //   // style={{
-              //   //   backgroundImage: `url(${activity.bgImg})`,
-              //   // }}
-              //   // className="bgImage"
-              //   className="activity-wrapper"
-              // >
-              //   <img
-              //     src={activity.image}
-              //     alt="image"
-              //     className="activity-img"
-              //   />
-              //   <div className="name-title">
-              //     <p className="activity-name">{activity.name}</p>
-              //     <p className="activity-title">{activity.title}</p>
-              //   </div>
-              // </div>
-
               <div key={activity.id}>
                 <img
                   src={activity.image}
@@ -71,8 +52,23 @@ const activity = () => {
         </div>
         <Feed />
       </div>
-    </>
+    </div>
   );
 };
 
 export default activity;
+
+//  <div
+//    key={activity.id}
+//    // style={{
+//    //   backgroundImage: `url(${activity.bgImg})`,
+//    // }}
+//    // className="bgImage"
+//    className="activity-wrapper"
+//  >
+//    <img src={activity.image} alt="image" className="activity-img" />
+//    <div className="name-title">
+//      <p className="activity-name">{activity.name}</p>
+//      <p className="activity-title">{activity.title}</p>
+//    </div>
+//  </div>;

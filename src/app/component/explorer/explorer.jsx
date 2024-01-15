@@ -13,7 +13,7 @@ import "./explorer.css";
 
 const Explorer = () => {
   return (
-    <>
+    <div className="explorer-main">
       <div className="explorer">
         <div>
           <img
@@ -54,7 +54,7 @@ const Explorer = () => {
           <button className="btnSync">Sync</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

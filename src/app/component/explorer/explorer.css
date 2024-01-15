@@ -1,3 +1,7 @@
+.explorer-main {
+  position: fixed;
+}
+
 .explorer {
   position: relative;
   top: 50px;
