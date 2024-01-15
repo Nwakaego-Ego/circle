@@ -29,7 +29,6 @@ const activity = () => {
     },
   ];
 
-  const background = "./ego.jpeg";
   return (
     <div className="main-activity">
       <div className="activity">

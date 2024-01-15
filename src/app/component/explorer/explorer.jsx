@@ -1,3 +1,6 @@
+"use client";
+import React, { useState } from "react";
+import ReactModal from "../modal/modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserGroup,
@@ -8,10 +11,19 @@ import {
   faGear,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-
 import "./explorer.css";
 
 const Explorer = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <div className="explorer-main">
       <div className="explorer">
@@ -51,9 +63,12 @@ const Explorer = () => {
             <FontAwesomeIcon icon={faGear} className="fa" />
             <div>Setting</div>
           </div>
-          <button className="btnSync">Sync</button>
+          <button className="btnSync" onClick={openModal}>
+            Sync
+          </button>
         </div>
       </div>
+      <ReactModal modalOpen={modalOpen} closeModal={closeModal} />
     </div>
   );
 };
