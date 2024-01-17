@@ -10,15 +10,39 @@ const ReactModal = ({ modalOpen, closeModal }) => {
 
   const [pastedImage, setPastedImage] = useState("");
 
+  // const handlePaste = async () => {
+  //   try {
+  //     const clipboardItems = await navigator.clipboard.read();
+
+  //     for (const clipboardItem of clipboardItems) {
+  //       for (const type of clipboardItem.types) {
+  //         if (type === "text/plain") {
+  //           const text = await clipboardItem.getType(type);
+  //           setPastedText(text);
+  //           setPastedImage("");
+  //         } else if (type.startsWith("image/")) {
+  //           const blob = await clipboardItem.getType(type);
+  //           const imageUrl = URL.createObjectURL(blob);
+  //           setPastedImage(imageUrl);
+  //           setPastedText("");
+  //         }
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error("Error pasting from clipboard:", error);
+  //   }
+  // };
+
   const handlePaste = async () => {
     try {
       const clipboardItems = await navigator.clipboard.read();
+      const clipboardText = await navigator.clipboard.readText();
 
       for (const clipboardItem of clipboardItems) {
         for (const type of clipboardItem.types) {
           if (type === "text/plain") {
-            const text = await clipboardItem.getType(type);
-            setPastedText(text);
+            // const text = await clipboardItem.getType(type);
+            setPastedText(clipboardText);
             setPastedImage("");
           } else if (type.startsWith("image/")) {
             const blob = await clipboardItem.getType(type);
