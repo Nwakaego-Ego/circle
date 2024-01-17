@@ -6,6 +6,41 @@ import "./modal.css";
 
 const ReactModal = ({ modalOpen, closeModal }) => {
   const [toggle, setToggle] = useState(false);
+  const [pastedText, setPastedText] = useState("");
+
+  const [pastedImage, setPastedImage] = useState("");
+
+  const handlePaste = async () => {
+    try {
+      const clipboardItems = await navigator.clipboard.read();
+
+      for (const clipboardItem of clipboardItems) {
+        for (const type of clipboardItem.types) {
+          if (type === "text/plain") {
+            const text = await clipboardItem.getType(type);
+            setPastedText(text);
+            setPastedImage("");
+          } else if (type.startsWith("image/")) {
+            const blob = await clipboardItem.getType(type);
+            const imageUrl = URL.createObjectURL(blob);
+            setPastedImage(imageUrl);
+            setPastedText("");
+          }
+        }
+      }
+    } catch (error) {
+      console.error("Error pasting from clipboard:", error);
+    }
+  };
+
+  // const handlePaste = async () => {
+  //   try {
+  //     const clipboardText = await navigator.clipboard.readText();
+  //     setPastedText(clipboardText);
+  //   } catch (error) {
+  //     console.error("Error pasting from clipboard:", error);
+  //   }
+  // };
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -37,11 +72,21 @@ const ReactModal = ({ modalOpen, closeModal }) => {
         <div className="sync-modal-main">
           <div>
             {" "}
-            <FontAwesomeIcon icon={faXmark} className="fa" />
+            <FontAwesomeIcon
+              icon={faXmark}
+              className="fa"
+              onClick={closeModal}
+            />
           </div>
           <div className="sync-modal-placeholder">Sync here!</div>
           <div className="sync-modal-buttons">
-            <button className="sync-modal-btn-paste">Paste</button>
+            <button onClick={handlePaste} className="sync-modal-btn-paste">
+              Paste
+            </button>
+
+            {pastedText && <p>Pasted Text: {pastedText}</p>}
+            {pastedImage && <img src={pastedImage} alt="Pasted Image" />}
+            {/* <button className="sync-modal-btn-paste">Paste</button> */}
             <button className=" sync-modal-btn-import">Import</button>
             <button className="sync-modal-btn-circles" onClick={handleToggle}>
               Circles

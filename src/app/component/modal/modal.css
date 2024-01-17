@@ -58,7 +58,8 @@
     inset -1px -1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* .modal-toggle-items {
+.modal-toggle-items {
   margin-left: 350px;
-  margin-top: 100px;
-} */
+  position: relative;
+  bottom: 30px;
+}
