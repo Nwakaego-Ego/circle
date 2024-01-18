@@ -10,29 +10,6 @@ const ReactModal = ({ modalOpen, closeModal }) => {
 
   const [pastedImage, setPastedImage] = useState("");
 
-  // const handlePaste = async () => {
-  //   try {
-  //     const clipboardItems = await navigator.clipboard.read();
-
-  //     for (const clipboardItem of clipboardItems) {
-  //       for (const type of clipboardItem.types) {
-  //         if (type === "text/plain") {
-  //           const text = await clipboardItem.getType(type);
-  //           setPastedText(text);
-  //           setPastedImage("");
-  //         } else if (type.startsWith("image/")) {
-  //           const blob = await clipboardItem.getType(type);
-  //           const imageUrl = URL.createObjectURL(blob);
-  //           setPastedImage(imageUrl);
-  //           setPastedText("");
-  //         }
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.error("Error pasting from clipboard:", error);
-  //   }
-  // };
-
   const handlePaste = async () => {
     try {
       const clipboardItems = await navigator.clipboard.read();
@@ -57,14 +34,14 @@ const ReactModal = ({ modalOpen, closeModal }) => {
     }
   };
 
-  // const handlePaste = async () => {
-  //   try {
-  //     const clipboardText = await navigator.clipboard.readText();
-  //     setPastedText(clipboardText);
-  //   } catch (error) {
-  //     console.error("Error pasting from clipboard:", error);
-  //   }
-  // };
+  const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
+
+  const xMark = () => {
+    closeModal();
+    setPastedText("");
+    setPastedImage("");
+    setToggle(false);
+  };
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -84,8 +61,6 @@ const ReactModal = ({ modalOpen, closeModal }) => {
     },
   };
 
-  const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
-
   return (
     <div>
       <Modal
@@ -96,19 +71,23 @@ const ReactModal = ({ modalOpen, closeModal }) => {
         <div className="sync-modal-main">
           <div>
             {" "}
-            <FontAwesomeIcon
-              icon={faXmark}
-              className="fa"
-              onClick={closeModal}
-            />
+            <FontAwesomeIcon icon={faXmark} className="fa" onClick={xMark} />
           </div>
           <div className="sync-modal-placeholder">Sync here!</div>
           <div className="sync-modal-buttons">
             <button onClick={handlePaste} className="sync-modal-btn-paste">
               Paste
             </button>
-
-            {pastedText && <p>Pasted Text: {pastedText}</p>}
+            {/* {pastedText && <p>Pasted Text: {pastedText}</p>} */}{" "}
+            {pastedText && (
+              <div
+                className="editable-text"
+                contentEditable="true"
+                suppressContentEditableWarning={true}
+              >
+                {pastedText}
+              </div>
+            )}
             {pastedImage && <img src={pastedImage} alt="Pasted Image" />}
             {/* <button className="sync-modal-btn-paste">Paste</button> */}
             <button className=" sync-modal-btn-import">Import</button>
