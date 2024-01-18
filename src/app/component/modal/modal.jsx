@@ -88,7 +88,7 @@ const ReactModal = ({ modalOpen, closeModal }) => {
                 {pastedText}
               </div>
             )}
-            {pastedImage && <img src={pastedImage} alt="Pasted Image" />}
+            g{pastedImage && <img src={pastedImage} alt="Pasted Image" />}
             {/* <button className="sync-modal-btn-paste">Paste</button> */}
             <button className=" sync-modal-btn-import">Import</button>
             <button className="sync-modal-btn-circles" onClick={handleToggle}>
