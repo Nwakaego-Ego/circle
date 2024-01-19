@@ -1,9 +1,3 @@
-.sync-modal-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .sync-modal-placeholder {
   margin-top: 20px;
   font-size: 30px;
@@ -11,26 +5,21 @@
 }
 
 .sync-modal-buttons {
-  margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
 .sync-modal-btn-paste,
 .sync-modal-btn-import,
 .sync-modal-btn-circles {
-  border-radius: 10px;
   width: 100px;
-  padding: 10px;
-  margin: 5px;
-  background: linear-gradient(to bottom right, #e83e8c, #6f42c1, #3490dc);
-  box-shadow: var(--box-shadow-thin);
+  /* margin-top: 20px; */
 }
 
-.sync-modal-btn-circles {
+/* .sync-modal-btn-circles {
   margin-left: auto;
-}
+} */
 
 .modal-image-format,
 .modal-text-format {
@@ -41,10 +30,4 @@
 
 .modal-toggle-items {
   margin-top: 20px;
-}
-
-.sync-modal-btn-paste:hover,
-.sync-modal-btn-import:hover,
-.sync-modal-btn-circles:hover {
-  background: linear-gradient(var(--linear-gradient-hover));
 }

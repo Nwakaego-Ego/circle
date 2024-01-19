@@ -35,16 +35,14 @@
 .profile-bookmark,
 .profile-request-code {
   border-radius: 10px;
-  width: 130px;
-  padding: 10px;
-  margin: 20px;
+  width: 20px;
+  font-size: 10px;
+
+  margin: 30px;
   /* background-color: #6f42c1; */
-  background: linear-gradient(to bottom right, #e83e8c, #6f42c1, #3490dc);
-  box-shadow: var(box-shadow-thin);
 }
 
-.profile-memory:hover,
-.profile-bookmark:hover,
-.profile-request-code:hover {
-  background: linear-gradient(var(--linear-gradient-hover));
+.profile-edit-button {
+  font-size: 30px;
+  width: 20px;
 }
