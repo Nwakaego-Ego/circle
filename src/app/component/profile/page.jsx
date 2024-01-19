@@ -15,8 +15,9 @@ const Profile = () => {
               height={200}
               layout="fit"
               objectFit="cover"
-              className=" rounded-full w-60 h-60  "
+              className=" rounded-full w-60 h-60  mb-8"
             />
+            <button>Edit </button>
             <p className="profile-profile">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Asperiores ullam, mollitia similique quas, totam, quia ab

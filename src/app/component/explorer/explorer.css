@@ -30,6 +30,7 @@
   width: 150px;
   /* background-color: #bf30ee; */
   /* background-color: #6f42c1; */
+
   background: linear-gradient(to bottom right, #e83e8c, #6f42c1, #3490dc);
 
   box-shadow: var(--box-shadow-heavy);
@@ -67,5 +68,5 @@
 }
 
 .btnSync:hover {
-  background: var(--linear-gradient-hover);
+  background: linear-gradient(var(--linear-gradient-hover));
 }
