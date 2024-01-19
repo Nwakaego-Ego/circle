@@ -11,11 +11,10 @@ import {
 import "./modal.css";
 
 const ReactModal = ({ modalOpen, closeModal }) => {
-  // const [width, setWidth] = useState(500);
-  // const [height, setHeight] = useState(400);
   const [toggle, setToggle] = useState(false);
   const [pastedText, setPastedText] = useState("");
   const [pastedImage, setPastedImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handlePaste = async () => {
     try {
@@ -40,6 +39,29 @@ const ReactModal = ({ modalOpen, closeModal }) => {
     }
   };
 
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+
+    if (file && file.type.startsWith("image/")) {
+      // Check if the selected file is an image
+      setSelectedImage(URL.createObjectURL(file));
+    } else {
+      // Handle the case when a non-image file is selected
+      alert("Please select a valid image file");
+    }
+  };
+
+  const handleImportClick = () => {
+    if (selectedImage) {
+      console.log("Selected Image:", selectedImage);
+
+      // Perform actions with the selected image, if needed
+      // For example, you can display the image in your UI or upload it to a server
+    } else {
+      console.log("No image selected");
+    }
+  };
+
   const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
 
   const xMark = () => {
@@ -52,11 +74,6 @@ const ReactModal = ({ modalOpen, closeModal }) => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-
-  // const handleResize = (e) => {
-  //   setWidth(e.clientX);
-  //   setHeight(e.clientY);
-  // };
 
   const customStyles = {
     content: {
@@ -78,13 +95,11 @@ const ReactModal = ({ modalOpen, closeModal }) => {
         isOpen={modalOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        // onMouseMove={handleResize}
       >
         <div className="sync-modal-main">
           <div>
             <FontAwesomeIcon icon={faXmark} className="fa" onClick={xMark} />
           </div>
-          {/* <div className="sync-modal-placeholder">Sync here!</div> */}
           {pastedText && (
             <div
               className="editable-text modal-text-format"
@@ -102,30 +117,31 @@ const ReactModal = ({ modalOpen, closeModal }) => {
             />
           )}
           <div className="sync-modal-buttons">
-            {/* <button
-              onClick={handlePaste}
-              className="sync-modal-btn-paste"
-            ></button> */}
             <FontAwesomeIcon
               icon={faPaste}
               className="sync-modal-btn-paste"
               onClick={handlePaste}
             />
 
-            <FontAwesomeIcon
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+            {selectedImage && (
+              <img
+                src={selectedImage}
+                alt="Selected"
+                style={{ maxWidth: "100%", maxHeight: "200px" }}
+              />
+            )}
+            <button onClick={handleImportClick}>Import Image</button>
+            {/* <FontAwesomeIcon
               icon={faFileImport}
               className=" sync-modal-btn-import"
               onClick={handlePaste}
-            />
+            /> */}
             <FontAwesomeIcon
               icon={faUserGroup}
               className="sync-modal-btn-circles"
               onClick={handleToggle}
             />
-            {/* <button className=" sync-modal-btn-import">Import</button> */}
-            {/* <button className="sync-modal-btn-circles" onClick={handleToggle}>
-              Circles
-            </button> */}
           </div>
           {toggle &&
             items.map((item, id) => {

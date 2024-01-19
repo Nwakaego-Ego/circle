@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faHourglass } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FaClock } from "react-icons/fa";
 import "./sidebar.css";
 
@@ -25,7 +25,11 @@ const Sidebar = () => {
   return (
     <>
       <div className="circle-main">
-        <div className="circles">Circles</div>
+        <div className="circles-div">
+          {" "}
+          <FontAwesomeIcon icon={faSearch} className="circles" />
+        </div>
+
         <div>
           <div className="circle">Our Gossip</div>
           <div className="circle">Bible Study</div>

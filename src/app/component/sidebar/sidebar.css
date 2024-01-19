@@ -9,7 +9,16 @@
 }
 
 .circles {
-  font-weight: 800px;
+  text-align: right;
+}
+
+.circles-div {
+  width: 300px;
+  padding: 13px;
+  margin-top: 5px;
+  border-radius: 10px;
+
+  box-shadow: var(--box-shadow-thinner);
 }
 
 .circle {
