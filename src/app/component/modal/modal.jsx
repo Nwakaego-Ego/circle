@@ -100,6 +100,19 @@ const ReactModal = ({ modalOpen, closeModal }) => {
           <div>
             <FontAwesomeIcon icon={faXmark} className="fa" onClick={xMark} />
           </div>
+
+          <div className="sync-modal-btn-container">
+            <FontAwesomeIcon
+              icon={faFileImport}
+              className="sync-modal-btn-import"
+            />
+            <input
+              type="file"
+              accept="image/*"
+              className="file-input"
+              onChange={handleImageChange}
+            />
+          </div>
           {pastedText && (
             <div
               className="editable-text modal-text-format"
@@ -123,7 +136,20 @@ const ReactModal = ({ modalOpen, closeModal }) => {
               onClick={handlePaste}
             />
 
-            <input type="file" accept="image/*" onChange={handleImageChange} />
+            {/* <input type="file" accept="image/*" onChange={handleImageChange} /> */}
+            {/* <div className="sync-modal-btn-container">
+              <FontAwesomeIcon
+                icon={faFileImport}
+                className="sync-modal-btn-import"
+              />
+              <input
+                type="file"
+                accept="image/*"
+                className="file-input"
+                onChange={handleImageChange}
+              />
+            </div> */}
+
             {selectedImage && (
               <img
                 src={selectedImage}
@@ -131,11 +157,12 @@ const ReactModal = ({ modalOpen, closeModal }) => {
                 style={{ maxWidth: "100%", maxHeight: "200px" }}
               />
             )}
-            <button onClick={handleImportClick}>Import Image</button>
+            <button onClick={handleImportClick}></button>
             {/* <FontAwesomeIcon
               icon={faFileImport}
               className=" sync-modal-btn-import"
               onClick={handlePaste}
+             
             /> */}
             <FontAwesomeIcon
               icon={faUserGroup}
