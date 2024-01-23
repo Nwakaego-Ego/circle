@@ -14,12 +14,11 @@
 .sync-modal-btn-import,
 .sync-modal-btn-circles {
   width: 100px;
-  /* margin-top: 20px; */
 }
 
-/* .sync-modal-btn-circles {
-  margin-left: auto;
-} */
+.modal-icons {
+  /* margin-top: 170px; */
+}
 
 .modal-image-format,
 .modal-text-format {
@@ -32,15 +31,12 @@
   margin-top: 20px;
 }
 
-/* import file */
-
 .sync-modal-btn-container {
   position: relative;
   display: inline-block;
 }
 
 .sync-modal-btn-import {
-  /* Your FontAwesome icon styling */
   cursor: pointer;
 }
 
