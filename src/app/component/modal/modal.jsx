@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Modal from "react-modal";
-import innerCircle from "../innerCircle/innerCircle";
+import InnerCircle from "../innerCircle/innerCircle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faXmark,
@@ -137,20 +137,20 @@ const ReactModal = ({ modalOpen, closeModal }) => {
               onClick={handleToggle}
             />
           </div>
-          {/* {toggle &&
+
+          {toggle &&
             items.map((item, id) => {
               return (
                 <div key={id}>
-                  <div className="modal-toggle-items">{item}</div>
+                  {/* <div className="modal-toggle-items">{item}</div> */}
+                  <InnerCircle
+                    item={item}
+                    onClose={closeModal}
+                    className="modal-toggle-items"
+                  />
                 </div>
               );
-            })} */}
-          {toggle &&
-            items.map((item, id) => (
-              <div key={id}>
-                <ItemComponent item={item} onClose={closeModal} />
-              </div>
-            ))}
+            })}
         </div>
       </Modal>
     </div>
