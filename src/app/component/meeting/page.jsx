@@ -76,6 +76,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./meeting.css";
 
 const MeetingScheduler = () => {
   // State to manage input values
@@ -110,48 +111,39 @@ const MeetingScheduler = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-4 bg-white shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Schedule a Meeting</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">
-            Date:
-          </label>
+    <div className="meeting-container">
+      <h2 className="meeting-heading">Schedule a Meeting</h2>
+      <form className="meeting-form" onSubmit={handleFormSubmit}>
+        <div className="form-group">
+          <label className="form-label">Date:</label>
           <DatePicker
-            className="mt-1 p-2 border rounded-md w-full"
+            className="form-input"
             selected={meetingDetails.date}
             onChange={handleDateTimeChange}
             dateFormat="MMMM d, yyyy"
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">
-            Time:
-          </label>
+        <div className="form-group">
+          <label className="form-label">Time:</label>
           <input
-            className="mt-1 p-2 border rounded-md w-full"
+            className="form-input"
             type="time"
             name="time"
             value={meetingDetails.time}
             onChange={handleInputChange}
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">
-            Type of Interaction:
-          </label>
+        <div className="form-group">
+          <label className="form-label">Type of Interaction:</label>
           <input
-            className="mt-1 p-2 border rounded-md w-full"
+            className="form-input"
             type="text"
             name="interactionType"
             value={meetingDetails.interactionType}
             onChange={handleInputChange}
           />
         </div>
-        <button
-          className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-          type="submit"
-        >
+        <button className="form-button" type="submit">
           Schedule Meeting
         </button>
       </form>

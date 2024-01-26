@@ -4,7 +4,7 @@
 
 .explorer {
   position: relative;
-  top: 50px;
+  top: 30px;
 }
 
 .fa {
@@ -21,28 +21,17 @@
 }
 
 .btnSync {
-  /* text-align: center; */
   margin: 15px;
   padding: 10px;
   gap: 6px;
 
   border-radius: 10px;
   width: 150px;
-  /* background-color: #bf30ee; */
-  /* background-color: #6f42c1; */
 
   background: linear-gradient(to bottom right, #e83e8c, #6f42c1, #3490dc);
 
   box-shadow: var(--box-shadow-heavy);
 }
-
-/* .explorer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 5px;
-  max-width: 350px;
-} */
 
 .explorer-container {
   width: 180px;
@@ -54,11 +43,6 @@
   padding: 10px;
   gap: 6px;
   border-radius: 10px;
-  /* color: white; */
-
-  /* background: linear-gradient(to bottom right, #3490dc, #6f42c1, #e83e8c); */
-  /* background-color: #6f42c1; */
-  /* background-color: #bf30ee; */
 
   box-shadow: var(--box-shadow-light);
 }

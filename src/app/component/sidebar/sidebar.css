@@ -1,68 +1,81 @@
 .circle-main {
-  position: relative;
-  top: 70px;
-  left: 30px;
+  position: fixed;
+  left: 980px;
 }
 
-.circles {
-  font-weight: 600;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-right: 1px solid #ccc;
 }
 
-.circles {
-  text-align: right;
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.circles-div {
-  width: 300px;
-  padding: 13px;
-  margin-top: 5px;
-  border-radius: 10px;
+.search-icon {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
 
-  box-shadow: var(--box-shadow-thinner);
+.circle-container {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .circle {
   text-align: center;
-  width: 300px;
   background-color: #dfc9f3;
   padding: 10px;
   margin-top: 5px;
   font-weight: 500;
   border-radius: 10px;
-  /* border: 1px solid black; */
+  cursor: pointer;
 }
 
-.engagement-item {
-  display: flex;
-  align-items: center;
-  margin: 15px;
-  padding: 10px;
-  gap: 6px;
+.circles-div {
+  /* width: 300px; */
+  padding: 13px;
+  margin-top: 35px;
+  margin-bottom: 30px;
   border-radius: 10px;
-  /* color: white; */
 
-  /* background: linear-gradient(to bottom right, #3490dc, #6f42c1, #e83e8c); */
-  /* background-color: #6f42c1; */
-  /* background-color: #bf30ee; */
-  box-shadow: 15px 15px 7px rgba(0, 0, 0, 0.25),
-    10px 8px 40px rgba(0, 0, 0, 0.25), inset 3px 3px 6px rgba(0, 0, 0, 0.5),
-    inset 3px 3px 10px rgba(255, 255, 255, 0.2),
-    inset -3px -3px 8px rgba(0, 0, 0, 0.75);
-}
-
-.engagement-text {
-  font-weight: 600;
+  box-shadow: var(--box-shadow-thinner);
 }
 
 .engagement {
-  width: 300px;
+  width: 100%;
   background-color: #dfc9f3;
-  padding: 10px;
+  padding: 20px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 10px;
 }
 
+.engagement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-light);
+}
+
+.engagement-text {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.engagement-details {
+  margin-bottom: 10px;
+}
+
 .engagement-timer {
-  margin-left: 38px;
+  margin-left: 10px;
 }

@@ -1,0 +1,57 @@
+/* meeting.css */
+
+.meeting-container {
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.meeting-form {
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.form-button {
+  background-color: #4299e1;
+  /* color: #4a5568; */
+  color: whitesmoke;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  /* border-radius: 10px; */
+  background: linear-gradient(to bottom right, #e83e8c, #6f42c1, #3490dc);
+
+  /* box-shadow: var(--box-shadow-light); */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background: linear-gradient(to bottom right, #3490dc, #6f42c1, #e83e8c);
+}

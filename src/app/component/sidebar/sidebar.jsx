@@ -5,23 +5,12 @@ import "./sidebar.css";
 
 const Sidebar = () => {
   const engagements = [
-    {
-      title: "Our Gossip",
-      time: "4 : 30pm",
-    },
-    {
-      title: "Our Gossip",
-      time: "4 : 30pm",
-    },
-    {
-      title: "Our Gossip",
-      time: "4 : 30pm",
-    },
-    {
-      title: "Our Gossip",
-      time: "4 : 30pm",
-    },
+    { title: "Our Gossip", time: "4:30pm" },
+    { title: "Bible Study", time: "6:00pm" },
+    { title: "Book Club", time: "7:45pm" },
+    { title: "Twitter Trend", time: "9:15pm" },
   ];
+
   return (
     <>
       <div className="circle-main">
