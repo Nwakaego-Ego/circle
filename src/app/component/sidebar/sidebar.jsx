@@ -1,6 +1,11 @@
+"use client";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FaClock } from "react-icons/fa";
+import Link from "next/link";
+// import { Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
@@ -27,10 +32,13 @@ const Sidebar = () => {
         </div>
 
         <div className="engagement">
-          <div className="engagement-item ">
-            <FaClock className="fa" />
-            <div className="engagement-text">Engagements</div>
-          </div>
+          <Link href="/component/meeting">
+            <div className="engagement-item ">
+              <FaClock className="fa" />
+
+              <div className="engagement-text ">Engagements</div>
+            </div>
+          </Link>
 
           {engagements.map((item) => {
             return (
