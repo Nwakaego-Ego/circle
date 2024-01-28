@@ -1,5 +1,18 @@
 import React from "react";
 
-export default function syncButton() {
-  return <div>syncButton</div>;
+class MyButton extends React.Component {
+  handleClick = () => {
+    alert("Button clicked!");
+    // You can perform additional actions here
+  };
+
+  render() {
+    return (
+      <button className="my-button" onClick={this.handleClick}>
+        Click me
+      </button>
+    );
+  }
 }
+
+export default MyButton;
