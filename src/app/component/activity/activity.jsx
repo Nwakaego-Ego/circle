@@ -41,8 +41,8 @@ const activity = () => {
                   alt="image"
                   className="activity-img"
                 />
-                <div>
-                  <p className="activity-name">{activity.name}</p>
+                <div className="activity-wrapper">
+                  {/* <p className="activity-name">{activity.name}</p> */}
                   <p className="activity-title">{activity.title}</p>
                 </div>
               </div>

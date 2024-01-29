@@ -2,10 +2,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FaClock } from "react-icons/fa";
+import { FaClock, FaSearch } from "react-icons/fa";
 import Link from "next/link";
-// import { Link } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
@@ -21,7 +19,7 @@ const Sidebar = () => {
       <div className="circle-main">
         <div className="circles-div">
           {" "}
-          <FontAwesomeIcon icon={faSearch} className="circles" />
+          <FaSearch className="fa" />
         </div>
 
         <div>
