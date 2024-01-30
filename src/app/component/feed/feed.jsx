@@ -7,26 +7,30 @@ const Feed = () => {
     {
       image: "./nwakaego.jpeg",
       name: "nwakaego",
+      circle: "Feminst",
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. SintLorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minus, saepe facilis id ipsam quos ut esse aperiam rem maiores.",
-      img: "./junior_tired.webp",
+      img: "./feminst_feed.jpg",
     },
     {
-      image: "./nwakaego.jpeg",
-      name: "nwakaego",
+      image: "./feed_profile_pic.png",
+      name: "Micheal",
+      circle: "Catch up",
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. SintLorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minus, saepe facilis id ipsam quos ut esse aperiam rem maiores.",
-      img: "./junior_tired.webp",
+      img: "./catchup_feed.avif",
     },
     {
-      image: "./nwakaego.jpeg",
-      name: "nwakaego",
+      image: "./gregory_feed_profile.webp",
+      name: "Gregory",
+      circle: "Football Bant",
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. SintLorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minus, saepe facilis id ipsam quos ut esse aperiam rem maiores.",
-      img: "./junior_tired.webp",
+      img: "./football_feed.jpg",
     },
     {
-      image: "./nwakaego.jpeg",
-      name: "nwakaego",
+      image: "./ego.jpeg",
+      name: "Simi",
+      circle: "Book Club",
       text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. SintLorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minus, saepe facilis id ipsam quos ut esse aperiam rem maiores.",
-      img: "./junior_tired.webp",
+      img: "./bookclub_feed.jpg",
     },
   ];
 
@@ -45,8 +49,11 @@ const Feed = () => {
                     height={50}
                     className="feed-profile-img"
                   />
-                  <p className="feed-name">{item.name}</p>
+
+                  <span className="sync-circle">{item.circle}</span>
+                  <span className="sync-name">({item.name})</span>
                   <p className="sync-text">{item.text}</p>
+
                   <img
                     src={item.img}
                     alt="image"

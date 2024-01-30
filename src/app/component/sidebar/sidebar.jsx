@@ -8,10 +8,10 @@ import "./sidebar.css";
 
 const Sidebar = () => {
   const engagements = [
-    { title: "Our Gossip", time: "4:30pm" },
-    { title: "Bible Study", time: "6:00pm" },
-    { title: "Book Club", time: "7:45pm" },
-    { title: "Twitter Trend", time: "9:15pm" },
+    { title: "Catch up", date: "January : 24", time: "4:30pm" },
+    { title: "Feminist", date: "October : 4", time: "6:00pm" },
+    { title: "Book Club", date: "December : 17", time: "7:45pm" },
+    { title: "Football Bant", date: "March : 28", time: "9:15pm" },
   ];
 
   return (
@@ -22,30 +22,33 @@ const Sidebar = () => {
           <FaSearch className="fa" />
         </div>
 
-        <div>
-          <div className="circle">Our Gossip</div>
-          <div className="circle">Bible Study</div>
-          <div className="circle">Book Club</div>
-          <div className="circle">Twitter trend</div>
-        </div>
+        <div className="circle-second-main-container">
+          <div>
+            <div className="circle">Catch up</div>
+            <div className="circle">Feminist</div>
+            <div className="circle">Book Club</div>
+            <div className="circle">Football Bant</div>
+          </div>
 
-        <div className="engagement">
-          <Link href="/component/meeting">
-            <div className="engagement-item ">
-              <FaClock className="fa" />
+          <div className="engagement">
+            <Link href="/component/meeting">
+              <div className="engagement-item ">
+                <FaClock className="fa" />
 
-              <div className="engagement-text ">Engagements</div>
-            </div>
-          </Link>
-
-          {engagements.map((item) => {
-            return (
-              <div key={item.id} className="flex">
-                <div>{item.title}</div>
-                <div className=" engagement-timer">{item.time}</div>
+                <div className="engagement-text ">Engagements</div>
               </div>
-            );
-          })}
+            </Link>
+
+            {engagements.map((item) => {
+              return (
+                <div key={item.id} className="flex engagement-items">
+                  <div className="engagement-title">{item.title}</div>
+                  <div className=" engagement-timer">{item.time}</div>
+                  {/* <div className=" engagement-timer">{item.date}</div> */}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

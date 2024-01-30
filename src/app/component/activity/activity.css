@@ -8,8 +8,8 @@
 }
 
 .activity {
-  border-right: 1px solid rgba(240, 237, 237, 0.979);
-  border-left: 1px solid rgba(240, 237, 237, 0.979);
+  border-right: 2px solid rgba(240, 237, 237, 0.979);
+  border-left: 2px solid rgba(240, 237, 237, 0.979);
 }
 
 .activity-img {
@@ -17,6 +17,7 @@
   height: 80px;
   border-radius: 50%;
   border: 2px solid #6f42c1;
+  margin-left: 30px;
 }
 
 .activity-img:hover {
@@ -24,13 +25,7 @@
 }
 
 /* .activity-wrapper {
-  width: 300px;
-  padding: 13px;
-  margin-top: 35px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-
-  box-shadow: var(--box-shadow-thinner);
+  margin-left: 20px;
 } */
 
 .name-title {
@@ -53,12 +48,12 @@
 }
 
 .activity-title {
-  color: black;
+  color: #2a2f36;
   font-weight: 600;
   border-radius: 10px;
   width: 150px;
   border: 10px;
   position: relative;
   top: 8px;
-  left: 5px;
+  left: 28px;
 }

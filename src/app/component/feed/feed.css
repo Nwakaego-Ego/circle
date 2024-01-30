@@ -1,11 +1,12 @@
 .feed-container {
   position: relative;
-  top: 40px;
-  left: 30px;
+  top: 30px;
+  left: 40px;
   border: 1px solid rgba(240, 237, 237, 0.979);
   width: 500px;
   border-radius: 10px;
   margin: 10px;
+  cursor: pointer;
 
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.15), 3px 2px 12px rgba(0, 0, 0, 0.15),
     inset 1px 1px 3px rgba(0, 0, 0, 0.3),
@@ -31,8 +32,17 @@
 
 .sync-text {
   width: 400px;
+  color: #4a5568;
 }
 
 .feed-content-container {
   padding: 20px;
+}
+
+.sync-name {
+  color: #2a2f36;
+}
+
+.sync-circle {
+  color: #2a2f36;
 }

@@ -12,13 +12,15 @@ const MeetingScheduler = () => {
   });
   const [dropDownCircles, setDropDownCircles] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [time, setTime] = useState("");
+  const [scheduleCircle, setScheduleCircle] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setMeetingDetails((prevDetails) => ({
       ...prevDetails,
-      // [name]: value,
-      time: value,
+      [name]: value,
+      // time: value,
     }));
   };
 
@@ -49,6 +51,11 @@ const MeetingScheduler = () => {
       ...prevDetails,
       date,
     }));
+  };
+
+  const schedule = ({ date, circle }) => {
+    setTime(date);
+    setScheduleCircle(circle);
   };
 
   const handleFormSubmit = (e) => {
@@ -107,101 +114,14 @@ const MeetingScheduler = () => {
             )}
           </div>
         </div>
-        <button className="form-button" type="submit">
+        <button className="form-button" type="submit" onClick={schedule}>
           Schedule Meeting
         </button>
       </form>
+      <div>{scheduleCircle}</div>
+      <div>{time}</div>
     </div>
   );
 };
 
 export default MeetingScheduler;
-
-// const MeetingScheduler = () => {
-//   const [meetingDetails, setMeetingDetails] = useState({
-//     date: null,
-//     time: null,
-//     interactionType: "",
-//   });
-//   const [dropDownCircles, setDropDownCircles] = useState("");
-
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     setMeetingDetails((prevDetails) => ({
-//       ...prevDetails,
-//       [name]: value,
-//     }));
-//   };
-
-//   const handleInputCircles = (e, circle) => {
-//     const { name, value } = e.target;
-//     setMeetingDetails((prevDetails) => ({
-//       ...prevDetails,
-//       [name]: value,
-//     }));
-//     setDropDownCircles(circle);
-//   };
-
-//   const circles = ["Gossip", "Feminist", "Book Club", "Head Line"];
-
-//   const handleDateTimeChange = (date) => {
-//     setMeetingDetails((prevDetails) => ({
-//       ...prevDetails,
-//       date,
-//     }));
-//   };
-
-//   const handleFormSubmit = (e) => {
-//     e.preventDefault();
-//     console.log("Meeting details submitted:", meetingDetails);
-//   };
-
-//   return (
-//     <div className="meeting-container">
-//       <h2 className="meeting-heading">Schedule a Meeting</h2>
-//       <form className="meeting-form" onSubmit={handleFormSubmit}>
-//         <div className="form-group">
-//           <label className="form-label">Date:</label>
-//           <DatePicker
-//             className="form-input"
-//             selected={meetingDetails.date}
-//             onChange={handleDateTimeChange}
-//             dateFormat="MMMM d, yyyy"
-//           />
-//         </div>
-//         <div className="form-group">
-//           <label className="form-label">Time:</label>
-//           <input
-//             className="form-input"
-//             type="time"
-//             name="time"
-//             value={meetingDetails.time}
-//             onChange={handleInputChange}
-//           />
-//         </div>
-//         <div className="form-group">
-//           <label className="form-label">Circle Name:</label>
-//           <input
-//             className="form-input"
-//             type="text"
-//             name="interactionType"
-//             value={meetingDetails.interactionType}
-//             onChange={handleInputCircles}
-//           />
-//         </div>
-//         <button className="form-button" type="submit">
-//           Schedule Meeting
-//         </button>
-//       </form>
-//       {circles.map((circle, id) => {
-//         return (
-//           <div key={id}>
-//             <div className="">{}</div>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// };
-
-// export default MeetingScheduler;

@@ -4,7 +4,7 @@
 
 .explorer {
   position: relative;
-  top: 30px;
+  /* top: 30px; */
 }
 
 .fa {
@@ -24,7 +24,7 @@
   margin: 15px;
   padding: 10px;
   gap: 6px;
-
+  cursor: pointer;
   border-radius: 10px;
   width: 150px;
 
@@ -43,8 +43,8 @@
   padding: 10px;
   gap: 6px;
   border-radius: 10px;
-
-  box-shadow: var(--box-shadow-light);
+  cursor: pointer;
+  /* box-shadow: var(--box-shadow-light); */
 }
 
 .explorer-item:hover {

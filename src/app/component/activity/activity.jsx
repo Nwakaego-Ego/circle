@@ -5,27 +5,27 @@ const activity = () => {
   const activityBar = [
     {
       bgImg: "/bryan.jpeg",
-      image: "/bryan.jpeg",
+      image: "/catchup.png",
       name: "Bryan",
-      title: "Kiddies",
+      title: "Catch up",
     },
     {
-      bgImg: "/nwakaego.jpeg",
-      image: "/ego.jpeg",
+      bgImg: "/witch.jpeg",
+      image: "/witch.jpeg",
       name: "Nwakaego",
-      title: "Twitter feminist",
+      title: "Feminist",
     },
     {
-      bgImg: "/chisom.jpeg",
-      image: "/chisom.jpeg",
+      bgImg: "/bookclub.png",
+      image: "/bookclub.png",
       name: "Chisom",
-      title: "RHWL Gist ",
+      title: "Book Club",
     },
     {
-      bgImg: "/chika.jpeg",
-      image: "/chika.jpeg",
+      bgImg: "/Football.jpg",
+      image: "/Football.jpg",
       name: "Fabulous",
-      title: "Fabulous Empire",
+      title: "Football Bant",
     },
   ];
 
@@ -35,13 +35,13 @@ const activity = () => {
         <div className="flex ">
           {activityBar.map((activity) => {
             return (
-              <div key={activity.id}>
+              <div key={activity.id} className="activity-wrapper">
                 <img
                   src={activity.image}
                   alt="image"
                   className="activity-img"
                 />
-                <div className="activity-wrapper">
+                <div className="">
                   {/* <p className="activity-name">{activity.name}</p> */}
                   <p className="activity-title">{activity.title}</p>
                 </div>

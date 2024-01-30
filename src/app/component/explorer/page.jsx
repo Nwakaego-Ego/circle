@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ReactModal from "../modal/modal";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserGroup,
@@ -40,8 +41,10 @@ const Explorer = () => {
             <div>Home</div>
           </div>
           <div className="explorer-item">
-            <FontAwesomeIcon icon={faUser} className="fa" />
-            <div>Profile</div>
+            <Link href="/component/profile" className="flex">
+              <FontAwesomeIcon icon={faUser} className="fa" />
+              <div>Profile</div>
+            </Link>
           </div>
           <div className="explorer-item">
             <FontAwesomeIcon icon={faBell} className="fa" />
