@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Sidebar from "../sidebar/sidebar";
 import "./meeting.css";
 
 const MeetingScheduler = () => {
@@ -53,9 +54,11 @@ const MeetingScheduler = () => {
     }));
   };
 
-  const schedule = ({ date, circle }) => {
-    setTime(date);
-    setScheduleCircle(circle);
+  const schedule = () => {
+    const { interactionType, time } = meetingDetails;
+
+    setScheduleCircle(interactionType);
+    setTime(time);
   };
 
   const handleFormSubmit = (e) => {
@@ -118,8 +121,9 @@ const MeetingScheduler = () => {
           Schedule Meeting
         </button>
       </form>
-      <div>{scheduleCircle}</div>
-      <div>{time}</div>
+      <Sidebar time={time} scheduleCircle={scheduleCircle} />
+      {/* <div>{scheduleCircle}</div>
+      <div>{time}</div> */}
     </div>
   );
 };

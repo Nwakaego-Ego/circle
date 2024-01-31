@@ -1,18 +1,18 @@
-import React from "react";
+// Creating a context
+const MyContext = React.createContext();
 
-class MyButton extends React.Component {
-  handleClick = () => {
-    alert("Button clicked!");
-    // You can perform additional actions here
-  };
+// Providing data using Context.Provider
+function MyProvider({ children }) {
+  const sharedData = { value: "Hello from Context!" };
 
-  render() {
-    return (
-      <button className="my-button" onClick={this.handleClick}>
-        Click me
-      </button>
-    );
-  }
+  return <MyContext.Provider value={sharedData}>{children}</MyContext.Provider>;
 }
 
-export default MyButton;
+// Consuming data using Context.Consumer
+function MyComponent() {
+  return (
+    <MyContext.Consumer>
+      {(context) => <div>{context.value}</div>}
+    </MyContext.Consumer>
+  );
+}
