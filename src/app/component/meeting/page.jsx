@@ -13,8 +13,8 @@ const MeetingScheduler = () => {
   });
   const [dropDownCircles, setDropDownCircles] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [time, setTime] = useState("");
-  const [scheduleCircle, setScheduleCircle] = useState("");
+  // const [time, setTime] = useState("");
+  // const [scheduleCircle, setScheduleCircle] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,12 +54,12 @@ const MeetingScheduler = () => {
     }));
   };
 
-  const schedule = () => {
-    const { interactionType, time } = meetingDetails;
+  // const schedule = () => {
+  //   const { interactionType, time } = meetingDetails;
 
-    setScheduleCircle(interactionType);
-    setTime(time);
-  };
+  //   setScheduleCircle(interactionType);
+  //   setTime(time);
+  // };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -117,13 +117,11 @@ const MeetingScheduler = () => {
             )}
           </div>
         </div>
-        <button className="form-button" type="submit" onClick={schedule}>
+        <button className="form-button" type="submit">
           Schedule Meeting
         </button>
       </form>
-      <Sidebar time={time} scheduleCircle={scheduleCircle} />
-      {/* <div>{scheduleCircle}</div>
-      <div>{time}</div> */}
+      {/* <Sidebar time={time} scheduleCircle={scheduleCircle} /> */}
     </div>
   );
 };
