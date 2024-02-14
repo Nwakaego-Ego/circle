@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Sidebar from "../sidebar/sidebar";
+import { useDispatch } from "react-redux";
+import { setScheduleCircle, setTime } from "../features/scheduleSlice";
+
 import "./meeting.css";
 
 const MeetingScheduler = () => {
@@ -13,8 +15,14 @@ const MeetingScheduler = () => {
   });
   const [dropDownCircles, setDropDownCircles] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // const [time, setTime] = useState("");
-  // const [scheduleCircle, setScheduleCircle] = useState("");
+
+  const dispatch = useDispatch();
+
+  const schedule = () => {
+    const { interactionType, time } = meetingDetails;
+    dispatch(setScheduleCircle(interactionType));
+    dispatch(setTime(time));
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

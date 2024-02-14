@@ -7,6 +7,7 @@ export default function Home() {
   const store = configureStore({
     reducer: {
       meeting: meetingReducer,
+      call: calling,
     },
   });
 
