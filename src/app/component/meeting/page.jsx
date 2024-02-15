@@ -125,7 +125,7 @@ const MeetingScheduler = () => {
             )}
           </div>
         </div>
-        <button className="form-button" type="submit">
+        <button className="form-button" type="submit" onClick={schedule}>
           Schedule Meeting
         </button>
       </form>
