@@ -1,16 +1,11 @@
-"use client";
 import React from "react";
 import { FaClock, FaSearch } from "react-icons/fa";
 import Link from "next/link";
+import { useSelector } from "react-redux"; // Changed from UseSelector to useSelector
 import "./sidebar.css";
 
-const Sidebar = ({ time, scheduleCircle }) => {
-  const engagements = [
-    { title: "Catch up", date: "January : 24", time: "4:30pm" },
-    { title: "Feminist", date: "October : 4", time: "6:00pm" },
-    { title: "Book Club", date: "December : 17", time: "7:45pm" },
-    { title: "Football Bant", date: "March : 28", time: "9:15pm" },
-  ];
+const Sidebar = () => {
+  const { time, scheduleCircle } = useSelector((state) => state.meeting.value); // Fetching values from Redux store
 
   return (
     <>
@@ -48,15 +43,3 @@ const Sidebar = ({ time, scheduleCircle }) => {
 };
 
 export default Sidebar;
-
-// {
-//   engagements.map((item) => {
-//     return (
-//       <div key={item.id} className="flex engagement-items">
-//         {/* <div className="engagement-title">{item.title}</div>
-//                   <div className=" engagement-timer">{item.time}</div> */}
-//         {/* <div className=" engagement-timer">{item.date}</div> */}
-//       </div>
-//     );
-//   });
-// }

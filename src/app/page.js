@@ -1,9 +1,8 @@
 "use client";
-import Dasboard from "../app/component/dashboard/dashboard.jsx";
+import Dashboard from "../app/component/dashboard/dashboard.jsx";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-// import meetingReducer from "./reducers";
-import meetingReducer from "./component/meeting/page.jsx";
+import meetingReducer from "./component/features/scheduleSlice.jsx";
 
 export default function Home() {
   const store = configureStore({
@@ -15,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <Provider store={store}>
-        <Dasboard />
+        <Dashboard />
       </Provider>
     </main>
   );

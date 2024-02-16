@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const meetingSlice = createSlice({
   name: "meeting",
-  initialState: { scheduleCircle: "", time: "" },
+  initialState: { value: { scheduleCircle: "", time: "" } },
   reducers: {
     setScheduleCircle: (state, action) => {
       state.scheduleCircle = action.payload;
