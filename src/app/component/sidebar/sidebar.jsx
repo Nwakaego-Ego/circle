@@ -1,11 +1,11 @@
 import React from "react";
 import { FaClock, FaSearch } from "react-icons/fa";
 import Link from "next/link";
-import { useSelector } from "react-redux"; // Changed from UseSelector to useSelector
+import { useSelector } from "react-redux";
 import "./sidebar.css";
 
 const Sidebar = () => {
-  const { time, scheduleCircle } = useSelector((state) => state.meeting.value); // Fetching values from Redux store
+  const { time, scheduleCircle } = useSelector((state) => state.meeting.value);
 
   return (
     <>
