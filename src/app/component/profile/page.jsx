@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,7 +10,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./profile.css";
 
-const Profile = () => {
+const Profile = ({ imgCollection }) => {
+  const [images, setImages] = useState([]);
+
+  const handleImgCollection = () => {
+    const imagesCollection = imgCollection();
+    setImages(imagesCollection);
+  };
+
+  console.log(images);
+
   return (
     <>
       <div className="container-wrapper">
@@ -32,16 +42,25 @@ const Profile = () => {
               excepturi repellat nihil consectetur possimus quae a corporis id
               eius cumque ducimus maiores quidem.
             </p>
-            <div className="flex profile-buttons">
-              <FontAwesomeIcon icon={faImages} className="profile-memory" />
-              <FontAwesomeIcon icon={faBookmark} className="profile-bookmark" />
+            <div className="flex profile-buttons ">
+              <button onClick={handleImgCollection}>
+                <FontAwesomeIcon
+                  icon={faImages}
+                  className="profile-memory profile-icon"
+                />
+              </button>
+              <FontAwesomeIcon
+                icon={faBookmark}
+                className="profile-bookmark profile-icon"
+              />
               <FontAwesomeIcon
                 icon={faUserLock}
-                className="profile-request-code"
+                className="profile-request-code profile-icon"
               />
               {/* <button className="profile-memory">Memory</button> */}
               {/* <button className="profile-bookmark">Bookmark</button> */}
               {/* <button className="profile-request-code">Request code</button> */}
+              {images}
             </div>
           </div>
         </div>
