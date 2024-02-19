@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { imgCollection } from "../../imgCollection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faImages,
@@ -8,14 +9,15 @@ import {
   faUserLock,
   faEdit,
 } from "@fortawesome/free-solid-svg-icons";
+
 import "./profile.css";
 
-const Profile = ({ imgCollection }) => {
+const Profile = () => {
+  console.log(imgCollection);
   const [images, setImages] = useState([]);
 
   const handleImgCollection = () => {
-    const imagesCollection = imgCollection();
-    setImages(imagesCollection);
+    setImages(imgCollection);
   };
 
   console.log(images);
@@ -32,10 +34,9 @@ const Profile = ({ imgCollection }) => {
               height={200}
               layout="fit"
               objectFit="cover"
-              className=" rounded-full w-60 h-60  mb-8"
+              className="rounded-full w-60 h-60 mb-8"
             />
             <FontAwesomeIcon icon={faEdit} className="profile-edit-button" />
-            {/* <button className="profile-edit-button">Edit </button> */}
             <p className="profile-profile">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Asperiores ullam, mollitia similique quas, totam, quia ab
@@ -57,10 +58,6 @@ const Profile = ({ imgCollection }) => {
                 icon={faUserLock}
                 className="profile-request-code profile-icon"
               />
-              {/* <button className="profile-memory">Memory</button> */}
-              {/* <button className="profile-bookmark">Bookmark</button> */}
-              {/* <button className="profile-request-code">Request code</button> */}
-              {images}
             </div>
           </div>
         </div>

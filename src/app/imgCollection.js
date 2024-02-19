@@ -1,28 +1,45 @@
-import Profile from "./component/profile";
+// import Profile from "./component/profile";
 
-const profileImg = () => {
-  const imgCollection = () => {
-    [
-      {
-        image: "/bryan.jpeg",
-        name: "bryan",
-      },
-      {
-        image: "/ego.jpeg",
-        name: ego,
-      },
-      {
-        image: "/chisom.jpeg",
-        name: "chisom",
-      },
-      {
-        image: "/chika.jpeg",
-        name: "chika",
-      },
-    ];
-  };
+// const imgCollection = () => {
+//   const profile = [
+//     {
+//       image: "/bryan.jpeg",
+//       name: "bryan",
+//     },
+//     {
+//       image: "/ego.jpeg",
+//       name: "ego",
+//     },
+//     {
+//       image: "/chisom.jpeg",
+//       name: "chisom",
+//     },
+//     {
+//       image: "/chika.jpeg",
+//       name: "chika",
+//     },
+//   ];
 
-  return <Profile imgCollection={imgCollection()} />;
-};
+//   return <Profile imgCollection={profile} />;
+// };
 
-export default profileImg;
+// export default imgCollection;
+
+export const imgCollection = [
+  {
+    image: "/bryan.jpeg",
+    name: "bryan",
+  },
+  {
+    image: "/ego.jpeg",
+    name: "ego",
+  },
+  {
+    image: "/chisom.jpeg",
+    name: "chisom",
+  },
+  {
+    image: "/chika.jpeg",
+    name: "chika",
+  },
+];
