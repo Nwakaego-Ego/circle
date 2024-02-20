@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { imgCollection } from "../../imgCollection";
+import { imgCollection, image } from "../../imgCollection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faImages,
@@ -59,6 +59,21 @@ const Profile = () => {
                 className="profile-request-code profile-icon"
               />
             </div>
+            {images.map((item, id) => {
+              return (
+                <div key={id}>
+                  <img
+                    src={item.image}
+                    alt="profile_img"
+                    width={300}
+                    height={200}
+                    layout="fit"
+                    objectFit="cover"
+                    className="rounded-full w-60 h-60 mb-8"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
