@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { imgCollection, image } from "../../imgCollection";
+import { imgCollection } from "../../imgCollection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faImages,
@@ -15,12 +15,23 @@ import "./profile.css";
 const Profile = () => {
   console.log(imgCollection);
   const [images, setImages] = useState([]);
+  const [randomCode, setRandomCode] = useState();
 
   const handleImgCollection = () => {
-    setImages(imgCollection);
+    if (images.length > 0) {
+      setImages([]);
+    } else {
+      setImages(imgCollection);
+    }
   };
 
   console.log(images);
+
+  const generateRandomCode = () => {
+    // const code = generateRandomCode();
+    setRandomCode(Math.floor(Math.random() * 90000) + 10000);
+    // setRandomCode(code);
+  };
 
   return (
     <>
@@ -54,10 +65,12 @@ const Profile = () => {
                 icon={faBookmark}
                 className="profile-bookmark profile-icon"
               />
-              <FontAwesomeIcon
-                icon={faUserLock}
-                className="profile-request-code profile-icon"
-              />
+              <button onClick={generateRandomCode}>
+                <FontAwesomeIcon
+                  icon={faUserLock}
+                  className="profile-request-code profile-icon"
+                />
+              </button>
             </div>
             {images.map((item, id) => {
               return (
@@ -74,6 +87,7 @@ const Profile = () => {
                 </div>
               );
             })}
+            {randomCode}
           </div>
         </div>
       </div>
