@@ -8,6 +8,7 @@ import {
   faBookmark,
   faUserLock,
   faEdit,
+  faEyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./profile.css";
@@ -31,6 +32,10 @@ const Profile = () => {
     // const code = generateRandomCode();
     setRandomCode(Math.floor(Math.random() * 90000) + 10000);
     // setRandomCode(code);
+  };
+
+  const hideCode = () => {
+    setImages([]);
   };
 
   return (
@@ -87,7 +92,14 @@ const Profile = () => {
                 </div>
               );
             })}
-            {randomCode}
+            <div className="flex">
+              {randomCode}
+              <FontAwesomeIcon
+                icon={faEyeSlash}
+                className=""
+                onClick={hideCode}
+              />
+            </div>
           </div>
         </div>
       </div>
