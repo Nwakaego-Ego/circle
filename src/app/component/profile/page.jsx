@@ -35,7 +35,7 @@ const Profile = () => {
   };
 
   const hideCode = () => {
-    setImages([]);
+    setRandomCode("");
   };
 
   return (
@@ -94,11 +94,9 @@ const Profile = () => {
             })}
             <div className="flex">
               {randomCode}
-              <FontAwesomeIcon
-                icon={faEyeSlash}
-                className=""
-                onClick={hideCode}
-              />
+              <button onClick={hideCode}>
+                <FontAwesomeIcon icon={faEyeSlash} className="" />
+              </button>
             </div>
           </div>
         </div>
