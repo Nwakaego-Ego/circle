@@ -135,10 +135,10 @@ const Profile = () => {
   const [randomCode, setRandomCode] = useState("");
   const [codeHidden, setCodeHidden] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [profileText, setProfileText] = useState(
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ullam, mollitia similique quas, totam, quia ab excepturi repellat nihil consectetur possimus quae a corporis id eius cumque ducimus maiores quidem."
-  );
 
+  const [profileText, setProfileText] = useState("");
+
+  console.log(images);
   const handleImgCollection = () => {
     if (images.length > 0) {
       setImages([]);
@@ -146,6 +146,9 @@ const Profile = () => {
       setImages(imgCollection);
     }
   };
+
+  console.log(imgCollection);
+  console.log(images);
 
   const HandleFriendshipCode = () => {
     setRandomCode("");
@@ -187,14 +190,32 @@ const Profile = () => {
               className="profile-edit-button"
               onClick={handleProfileEdit}
             />
+
+            {/* {isEditing ? (
+              (
+                <textarea
+                  value={profileText}
+                  onChange={handleProfileTextChange}
+                  className="border border-red-400"
+                />
+              ) && <button onClick={handleProfileSave}>Save</button>
+            ) : (
+              <p className="profile-profile">{profileText}</p>
+            )} */}
+
             {isEditing ? (
-              <textarea
-                value={profileText}
-                onChange={handleProfileTextChange}
-              />
+              <>
+                <textarea
+                  value={profileText}
+                  onChange={handleProfileTextChange}
+                  className="border border-red-400"
+                />
+                <button onClick={handleProfileSave}>Save</button>
+              </>
             ) : (
               <p className="profile-profile">{profileText}</p>
             )}
+
             <div className="flex profile-buttons ">
               <button onClick={handleImgCollection}>
                 <FontAwesomeIcon
@@ -236,7 +257,20 @@ const Profile = () => {
                 )}
               </button>
             </div>
-            {isEditing && <button onClick={handleProfileSave}>Save</button>}
+            {images.map((item, id) => (
+              <div key={id}>
+                <img
+                  src={item.image}
+                  alt="profile_img"
+                  width={300}
+                  height={200}
+                  layout="fit"
+                  objectFit="cover"
+                  className="rounded-full w-60 h-60 mb-8"
+                />
+              </div>
+            ))}
+            {/* {isEditing && <button onClick={handleProfileSave}>Save</button>} */}
           </div>
         </div>
       </div>
