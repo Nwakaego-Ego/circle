@@ -1,11 +1,13 @@
+"use client";
 import React from "react";
 import { FaClock, FaSearch } from "react-icons/fa";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+
+// import { useSelector } from "react-redux";
 import "./sidebar.css";
 
 const Sidebar = () => {
-  const { time, scheduleCircle } = useSelector((state) => state.meeting.value);
+  // const { time, scheduleCircle } = useSelector((state) => state.meeting.value);
 
   return (
     <>
@@ -32,8 +34,8 @@ const Sidebar = () => {
             </Link>
 
             <div className="flex engagement-items">
-              <div className="engagement-timer">{time}</div>
-              <div className="engagement-title">{scheduleCircle}</div>
+              {/* <div className="engagement-timer">{time}</div>
+              <div className="engagement-title">{scheduleCircle}</div> */}
             </div>
           </div>
         </div>

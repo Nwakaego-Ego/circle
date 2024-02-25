@@ -115,9 +115,10 @@
 // export default Profile;
 
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { imgCollection } from "../../imgCollection";
+import Layout from "../../layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faImages,
@@ -135,8 +136,19 @@ const Profile = () => {
   const [randomCode, setRandomCode] = useState("");
   const [codeHidden, setCodeHidden] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-
   const [profileText, setProfileText] = useState("");
+
+  useEffect(() => {
+    const savedProfileText = localStorage.getItem("profileText");
+    if (savedProfileText) {
+      setProfileText(savedProfileText);
+    }
+  }, []);
+
+  // Save profile text to local storage when it changes
+  useEffect(() => {
+    localStorage.setItem("profileText", profileText);
+  }, [profileText]);
 
   console.log(images);
   const handleImgCollection = () => {
@@ -172,7 +184,7 @@ const Profile = () => {
   };
 
   return (
-    <>
+    <Layout>
       <div className="container-wrapper">
         <div className="profile-container">
           <div className="profile-main">
@@ -190,18 +202,6 @@ const Profile = () => {
               className="profile-edit-button"
               onClick={handleProfileEdit}
             />
-
-            {/* {isEditing ? (
-              (
-                <textarea
-                  value={profileText}
-                  onChange={handleProfileTextChange}
-                  className="border border-red-400"
-                />
-              ) && <button onClick={handleProfileSave}>Save</button>
-            ) : (
-              <p className="profile-profile">{profileText}</p>
-            )} */}
 
             {isEditing ? (
               <>
@@ -234,19 +234,6 @@ const Profile = () => {
                 />
               </button>
             </div>
-            {images.map((item, id) => (
-              <div key={id}>
-                <img
-                  src={item.image}
-                  alt="profile_img"
-                  width={300}
-                  height={200}
-                  layout="fit"
-                  objectFit="cover"
-                  className="rounded-full w-60 h-60 mb-8"
-                />
-              </div>
-            ))}
             <div className="flex">
               {randomCode}
               <button onClick={HandleFriendshipCode}>
@@ -270,11 +257,10 @@ const Profile = () => {
                 />
               </div>
             ))}
-            {/* {isEditing && <button onClick={handleProfileSave}>Save</button>} */}
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 
