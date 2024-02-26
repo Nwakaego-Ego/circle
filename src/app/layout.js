@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <div className="flex">
+      <div className="">
         <Sidebar />
         <body className={inter.className}>{children}</body>
         <Explorer />
