@@ -38,21 +38,3 @@ const RootLayout = ({ children }) => {
 };
 
 export default RootLayout;
-
-import React from "react";
-import Explorer from "./component/explorer/page";
-import Sidebar from "./component/sidebar/sidebar";
-import "./globals.css";
-
-const RootLayout = ({ children }) => {
-  return (
-    <div className="root-layout flex">
-      <Sidebar />
-      <div className="content-wrapper">{children}</div>
-      <Explorer />
-    </div>
-  );
-};
-
-export default RootLayout;
-
