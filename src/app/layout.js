@@ -13,7 +13,7 @@
 // export default function RootLayout({ children }) {
 //   return (
 //     <html lang="en">
-//       <div className="">
+//       <div className="root-layout flex">
 //         <Sidebar />
 //         <body className={inter.className}>{children}</body>
 //         <Explorer />
