@@ -120,7 +120,7 @@ const Explorer = () => {
           <div>Home</div>
         </div>
         <div className="explorer-item">
-          <Link href="/component/profile" className="flexg">
+          <Link href="/component/profile" className="flex">
             <FontAwesomeIcon icon={faUser} className="fa" />
             <div>Profile</div>
           </Link>

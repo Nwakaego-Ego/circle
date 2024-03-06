@@ -78,7 +78,7 @@ const MeetingScheduler = () => {
 
   return (
     <div className="meeting-container">
-      <h2 className="meeting-heading">Schedule a Meeting</h2>
+      <div className="meeting-heading">Schedule a Meeting</div>
       <form className="meeting-form" onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label className="form-label">Date:</label>
