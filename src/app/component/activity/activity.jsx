@@ -43,7 +43,7 @@ const activity = () => {
                 />
                 <div className="">
                   {/* <p className="activity-name">{activity.name}</p> */}
-                  <p className="activity-title">{activity.title}</p>
+                  <div className="activity-title">{activity.title}</div>
                 </div>
               </div>
             );
