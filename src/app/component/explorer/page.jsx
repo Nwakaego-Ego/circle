@@ -17,13 +17,18 @@ import "./explorer.css";
 const Explorer = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
+  console.log(modalOpen);
+
   const closeModal = () => {
     setModalOpen(false);
   };
 
   const openModal = () => {
     setModalOpen(true);
+    console.log("Modal is open");
   };
+
+  console.log("Modal is false");
 
   return (
     <div className="explorer-main">
