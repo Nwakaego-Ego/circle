@@ -16,12 +16,7 @@ import "./profile.css";
 const Profile = () => {
   console.log(imgCollection);
   const [images, setImages] = useState([]);
-  const [randomCode, setRandomCode] = useState("");
-  const [codeHidden, setCodeHidden] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [profileText, setProfileText] = useState(
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ullam, mollitia similique quas, totam, quia ab excepturi repellat nihil consectetur possimus quae a corporis id eius cumque ducimus maiores quidem."
-  );
+  const [randomCode, setRandomCode] = useState();
 
   const handleImgCollection = () => {
     if (images.length > 0) {
@@ -31,25 +26,16 @@ const Profile = () => {
     }
   };
 
-  const HandleFriendshipCode = () => {
-    setRandomCode("");
-    setCodeHidden(!codeHidden);
-  };
+  console.log(images);
 
   const generateRandomCode = () => {
+    // const code = generateRandomCode();
     setRandomCode(Math.floor(Math.random() * 90000) + 10000);
+    // setRandomCode(code);
   };
 
-  const handleProfileEdit = () => {
-    setIsEditing(true);
-  };
-
-  const handleProfileSave = () => {
-    setIsEditing(false);
-  };
-
-  const handleProfileTextChange = (e) => {
-    setProfileText(e.target.value);
+  const hideCode = () => {
+    setRandomCode("");
   };
 
   return (
