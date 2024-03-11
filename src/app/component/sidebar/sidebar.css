@@ -1,10 +1,10 @@
-/* .circle-main {
+.circle-main {
   position: fixed;
-  left: 980px;
-} */
+  left: 900px;
+}
 
 .circle-main {
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 .circle-second-main-container {
