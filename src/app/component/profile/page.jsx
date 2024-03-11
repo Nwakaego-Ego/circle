@@ -20,9 +20,7 @@ const Profile = () => {
   const [randomCode, setRandomCode] = useState();
   const [codeHidden, setCodeHidden] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [profileText, setProfileText] = useState(
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ullam, mollitia similique quas, totam, quia ab excepturi repellat nihil consectetur possimus quae a corporis id eius cumque ducimus maiores quidem."
-  );
+  const [profileText, setProfileText] = useState("");
 
   const handleImgCollection = () => {
     if (images.length > 0) {
