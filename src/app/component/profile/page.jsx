@@ -16,7 +16,6 @@ import "./profile.css";
 const Profile = () => {
   console.log(imgCollection);
   const [images, setImages] = useState([]);
-  const [randomCode, setRandomCode] = useState();
   const [randomCode, setRandomCode] = useState("");
   const [codeHidden, setCodeHidden] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
