@@ -31,8 +31,6 @@ const Profile = () => {
     }
   };
 
-  console.log(images);
-
   const HandleFriendshipCode = () => {
     setRandomCode("");
     setCodeHidden(!codeHidden);
