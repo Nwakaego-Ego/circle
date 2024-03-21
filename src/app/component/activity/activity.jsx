@@ -28,6 +28,9 @@ const activity = () => {
       title: "Football Bant",
     },
   ];
+  const red = () => {
+    console.log("clicked actvitiy.....");
+  };
 
   return (
     <div className="main-activity">
@@ -40,6 +43,7 @@ const activity = () => {
                   src={activity.image}
                   alt="image"
                   className="activity-img"
+                  onClick={red}
                 />
                 <div className="">
                   {/* <p className="activity-name">{activity.name}</p> */}

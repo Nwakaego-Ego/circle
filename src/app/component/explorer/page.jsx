@@ -116,6 +116,10 @@ const Explorer = () => {
     console.log("great");
   };
 
+  const red = () => {
+    console.log("clicked ........");
+  };
+
   console.log("great");
 
   return (
@@ -159,7 +163,7 @@ const Explorer = () => {
           <FontAwesomeIcon icon={faGear} className="fa" />
           <div>Setting</div>
         </div>
-        <button className="btnSync" onClick={openModal}>
+        <button className="btnSync" onClick={red}>
           Sync
         </button>
       </div>
