@@ -107,6 +107,8 @@ const Explorer = () => {
     setIsClient(true);
   }, []);
 
+  console.log(isClient);
+
   const closeModal = () => {
     setModalOpen(false);
   };
