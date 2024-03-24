@@ -63,6 +63,8 @@ const ReactModal = ({ modalOpen, closeModal }) => {
     setToggle(!toggle);
   };
 
+  console.log(modalOpen);
+
   const customStyles = {
     content: {
       top: "50%",
